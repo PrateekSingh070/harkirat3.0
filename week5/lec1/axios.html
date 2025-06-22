@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    LINKEDIN
+    <div id="posts"></div>
+    <script>
+        async function getRecentPost(){
+            
+            console.log("before sending request")
+            const response=await axios.get("https://jsonplaceholder.typicode.com/posts/1")//ye syntax axios  wala fetch wale se easy hai
+
+            //yaha se fetch wala tarika hai
+            // const response=await axios.get("https://jsonplaceholder.typicode.com/posts/1",{
+            //     method:"GET"
+            // })
+            // const data=await response.json();
+            console.log("before sending request")
+        }
+        getRecentPost();
+    </script>
+</body>
+</html>
